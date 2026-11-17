@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>r星黑料不打烊-玩家爆料与争议档案</title>
+<meta name="description" content="r星黑料不打烊整理Rockstar Games近十年玩家爆料、跳票记录、Price变动与客服争议，按条目时间线归档，附体验指南、FAQ与可核对判断拆解。">
+<meta name="keywords" content="r星黑料不打烊">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1f2a'/%3E%3Cpath d='M14 44l10-26 8 14 8-14 10 26' fill='none' stroke='%23f2b21c' stroke-width='5' stroke-linejoin='round' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='49' r='3.4' fill='%23e8563f'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"r星黑料不打烊","inLanguage":"zh-CN","description":"Rockstar Games玩家爆料、跳票与争议归档站","potentialAction":{"@type":"SearchAction","target":"/#archive","query-input":"required name=search_term_string"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"GTA6 第二次延期到 2026 年 11 月 19 日是怎么回事？","acceptedAnswer":{"@type":"Answer","text":"Rockstar 于 2026 年 10 月 30 日在官方 X 账号发布延期说明，把发售日从 2026 年 5 月 26 日推至 11 月 19 日，理由是品质打磨。文字未提及 PC 版，PC 玩家需等待后续公告。"}},
+{"@type":"Question","name":"R星启动器为什么反复要求重新登录？","acceptedAnswer":{"@type":"Answer","text":"Reddit r/GTAOnline 在 2026 年 10 月 22 日的高赞帖汇总了 137 条回复，多数人把问题归到登录令牌缓存失效，清掉 Documents 下的 Social Club 缓存目录后恢复。"}},
+{"@type":"Question","name":"鲨鱼卡涨价后到底贵了多少？","acceptedAnswer":{"@type":"Answer","text":"以美元区为例，大白鲨卡从 99.99 美元上调到 109.99 美元，涨幅 10%；人民币区 8 亿游戏币档从 588 元调到 648 元。"}},
+{"@type":"Question","name":"Red Dead 线上模式停更后还能玩吗？","acceptedAnswer":{"@type":"Answer","text":"服务器仍在运行，2026 年 10 月 18 日官方公告只说明不再推出大型内容更新，现有赏金猎人与商贩任务线保留，季节活动照旧轮换。"}},
+{"@type":"Question","name":"客服工单多久能回复？","acceptedAnswer":{"@type":"Answer","text":"贴吧 10 月 26 日统计的 42 份工单里，首次响应中位数 3 天，7 天无回复的有 9 份，涉及退款与账号找回的工单普遍更慢。"}},
+{"@type":"Question","name":"爆料帖里的内部消息能信吗？","acceptedAnswer":{"@type":"Answer","text":"分辨先看是否给出可核对的中段，比如测试版本号、录制日期、职责人。只写“据内部人士”而没有这些线索的帖子，命中率在归档记录里不到两成。"}}
+]}
+</script>
+<style>
+:root{
+  --ink:#1b1f2a;
+  --ink-2:#3b4252;
+  --paper:#f6f3ec;
+  --card:#ffffff;
+  --line:#dcd5c6;
+  --brand:#f2b21c;
+  --brand-deep:#c98d05;
+  --alert:#e8563f;
+  --muted:#6d7280;
+  --ok:#2f7a52;
+  --radius:10px;
+  --shadow:0 2px 0 rgba(27,31,42,.08),0 8px 22px rgba(27,31,42,.07);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --mono:"SFMono-Regular","JetBrains Mono",Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font);background:var(--paper);color:var(--ink);
+  line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{margin:0 0 .6em;line-height:1.3;letter-spacing:.01em}
+p{margin:0 0 1em}
+a{color:var(--ink);text-decoration:none}
+a:hover{color:var(--brand-deep)}
+ul,ol{margin:0 0 1em;padding-left:1.3em}
+li{margin-bottom:.4em}
+img{max-width:100%;display:block}
+.wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:10px 16px;z-index:99}
+.skip:focus{left:8px;top:8px}
+:focus-visible{outline:3px solid var(--alert);outline-offset:2px}
+
+/* sticky stack */
+.stickwrap{position:sticky;top:0;z-index:50}
+.annbar{background:var(--ink);color:#f1ecdf;font-size:13.5px;border-bottom:2px solid var(--brand)}
+.annbar .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:7px 0;min-height:34px}
+.annbar .tag{background:var(--alert);color:#fff;padding:1px 8px;border-radius:3px;font-size:12px;font-weight:700;letter-spacing:.04em}
+.annbar strong{color:var(--brand);font-weight:700}
+.annbar .time{font-family:var(--mono);font-size:12px;color:#a9aeb8;margin-left:auto}
+
+header.site{background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(27,31,42,.04)}
+.headin{display:flex;align-items:center;gap:18px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.01em;white-space:nowrap}
+.brand svg{flex:0 0 auto}
+nav.main{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+nav.main a{padding:6px 11px;border-radius:6px;font-size:14.5px;color:var(--ink-2)}
+nav.main a:hover,nav.main a:focus-visible{background:#f4efe2;color:var(--ink)}
+.headtools{display:flex;gap:8px;align-items:center}
+.searchbox{display:flex;align-items:center;border:1px solid var(--line);border-radius:8px;background:#fbf9f3;padding:2px 4px 2px 10px}
+.searchbox input{border:0;background:transparent;font-family:var(--font);font-size:14px;width:150px;padding:6px 4px;outline:none;color:var(--ink)}
+.searchbox button{border:0;background:var(--ink);color:#fff;border-radius:6px;padding:6px 12px;font-size:13.5px;cursor:pointer;font-family:var(--font)}
+.searchbox button:hover{background:var(--brand-deep)}
+.menubtn{display:none;border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px 11px;font-size:14px;font-family:var(--font);cursor:pointer}
+.searchnote{display:none;padding:8px 0 12px;font-size:14px;color:var(--alert)}
+.searchnote.on{display:block}
+.hidden-by-search{display:none !important}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(1100px 420px at 82% -12%,rgba(242,178,28,.32),transparent 62%),
+  linear-gradient(180deg,#20252f 0%,#171b23 68%,#13161d 100%);
+  color:#f3efe4;padding:46px 0 40px;border-bottom:3px solid var(--brand)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.14em;color:var(--brand);border:1px solid rgba(242,178,28,.42);padding:4px 10px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(30px,4.4vw,50px);letter-spacing:.02em;margin-bottom:14px;color:#fff}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero p.lead{font-size:16.5px;color:#ccc8bc;max-width:36em;margin-bottom:22px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.btn{display:inline-block;padding:11px 20px;border-radius:8px;font-weight:700;font-size:15px;border:1px solid transparent;transition:transform .16s ease,background .16s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:var(--brand);color:#231a02}
+.btn-p:hover{background:#ffc63f;color:#231a02}
+.btn-g{background:transparent;color:#f3efe4;border-color:rgba(243,239,228,.4)}
+.btn-g:hover{border-color:var(--brand);color:var(--brand)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid rgba(243,239,228,.16);padding-top:18px}
+.stats div b{display:block;font-size:24px;font-family:var(--mono);color:var(--brand);line-height:1.2}
+.stats div span{font-size:12.5px;color:#a9aeb8;letter-spacing:.03em}
+.heroart{position:relative;min-height:300px}
+.heroart svg{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 30px rgba(0,0,0,.35))}
+
+/* sections */
+main{padding:8px 0 0}
+section.block{padding:38px 0;border-bottom:1px solid var(--line);scroll-margin-top:104px}
+section.block:last-of-type{border-bottom:0}
+.sec-head{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+.sec-head h2{font-size:23px;margin:0;position:relative;padding-left:14px}
+.sec-head h2::before{content:"";position:absolute;left:0;top:.18em;bottom:.18em;width:5px;background:var(--brand);border-radius:3px}
+.sec-head .sub{font-size:13.5px;color:var(--muted);margin-left:auto;font-family:var(--mono)}
+.lede{max-width:64em;color:var(--ink-2);margin-bottom:20px}
+
+/* overview */
+.ovgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ovcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.ovcard b{display:block;font-family:var(--mono);font-size:22px;color:var(--ink);line-height:1.25}
+.ovcard span{font-size:13.5px;color:var(--muted)}
+.ovcard .bar{height:4px;background:#efe9da;border-radius:3px;margin-top:10px;overflow:hidden}
+.ovcard .bar i{display:block;height:100%;background:var(--brand);border-radius:3px}
+
+/* featured asymmetric */
+.feat{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:16px}
+.feat article{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .16s ease}
+.feat article:hover{transform:translateY(-3px)}
+.feat .big{grid-row:span 2}
+.feat .big img{aspect-ratio:16/9}
+.feat article img{aspect-ratio:16/10;width:100%;height:auto;object-fit:cover;background:#e7e0d0}
+.feat .pad{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.feat h3{font-size:16px;margin:0}
+.feat .meta{font-size:12.5px;color:var(--muted);font-family:var(--mono)}
+.chip{display:inline-block;font-size:12px;padding:2px 8px;border-radius:4px;background:#f5edd8;color:#7a5a04;border:1px solid #ecdcae}
+.chip.red{background:#fde7e2;color:#a8341f;border-color:#f4c4b8}
+.chip.blue{background:#e6edf7;color:#2c4f82;border-color:#c7d6ec}
+.chip.green{background:#e5f1e8;color:#256540;border-color:#c3deca}
+
+/* news list */
+.newswrap{display:grid;grid-template-columns:1.6fr 1fr;gap:26px;align-items:start}
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid #e3dccb}
+.timeline li{position:relative;padding:0 0 20px 22px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:.55em;width:12px;height:12px;border-radius:50%;background:var(--card);border:3px solid var(--brand)}
+.timeline time{font-family:var(--mono);font-size:12.5px;color:var(--brand-deep);display:block;margin-bottom:2px}
+.timeline h3{font-size:15.5px;margin:0 0 4px}
+.timeline p{font-size:14.5px;color:var(--ink-2);margin:0}
+.sidebox{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+.sidebox h3{font-size:15px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px dashed var(--line)}
+.sidebox ul{list-style:none;padding:0;margin:0}
+.sidebox li{padding:7px 0;border-bottom:1px dotted #e7e0d0;font-size:14px}
+.sidebox li:last-child{border-bottom:0}
+.sidebox li span{font-family:var(--mono);font-size:12px;color:var(--muted);margin-right:8px}
+
+/* categories */
+.catgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.catgrid a{display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14.5px;font-weight:600;transition:border-color .15s,transform .15s}
+.catgrid a:hover{border-color:var(--brand);transform:translateY(-2px);color:var(--ink)}
+.catgrid a i{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+/* deep read */
+.deep{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 30px;box-shadow:var(--shadow)}
+.deep .djump{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.deep .djump a{font-size:13px;padding:4px 10px;border:1px solid var(--line);border-radius:6px;color:var(--ink-2);background:#fbf9f3}
+.deep .djump a:hover{border-color:var(--brand);color:var(--ink)}
+.deep h3{font-size:18.5px;margin-top:1.5em;padding-left:11px;border-left:4px solid var(--brand)}
+.deep p{color:#2c3140}
+.deep blockquote{margin:18px 0;padding:14px 18px;border-left:4px solid var(--alert);background:#fdf6f2;border-radius:0 8px 8px 0;font-size:15px;color:#3a2b25}
+.deep blockquote cite{display:block;font-style:normal;font-size:12.5px;color:var(--muted);margin-top:6px;font-family:var(--mono)}
+table.cmp{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0 6px}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+table.cmp th{background:#f6f1e3;font-size:13.5px}
+table.cmp td.num{font-family:var(--mono);white-space:nowrap}
+.verdict{background:#fbf7ea;border:1px dashed var(--brand-deep);border-radius:8px;padding:14px 16px;font-size:14.5px;margin:18px 0}
+
+/* guide steps */
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;counter-reset:s}
+.steps .st{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 16px 56px;position:relative;box-shadow:var(--shadow)}
+.steps .st::before{counter-increment:s;content:counter(s,decimal-leading-zero);position:absolute;left:14px;top:14px;font-family:var(--mono);font-size:19px;font-weight:700;color:var(--brand-deep)}
+.steps .st h3{font-size:15.5px;margin-bottom:4px}
+.steps .st p{font-size:14.2px;margin:0;color:var(--ink-2)}
+
+/* faq */
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:8px;margin-bottom:10px;box-shadow:var(--shadow)}
+.faq summary{cursor:pointer;padding:14px 18px;font-weight:700;font-size:15.2px;list-style:none;position:relative;padding-right:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:20px;color:var(--brand-deep)}
+.faq details[open] summary::after{content:"−"}
+.faq details > div{padding:0 18px 16px;font-size:14.6px;color:var(--ink-2)}
+
+/* comments */
+.cmts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cmt{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.cmt .who{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.cmt .av{width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--brand);display:grid;place-items:center;font-size:13px;font-weight:700;font-family:var(--mono);flex:0 0 auto}
+.cmt .who b{font-size:13.6px;display:block;line-height:1.3}
+.cmt .who span{font-size:11.8px;color:var(--muted);font-family:var(--mono)}
+.cmt p{font-size:14px;margin:0;color:#2c3140}
+.cmt .ref{margin-top:9px;font-size:12.2px;color:var(--brand-deep);font-family:var(--mono)}
+
+/* related */
+.relwrap{display:flex;flex-wrap:wrap;gap:10px}
+.relwrap a{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 15px;font-size:13.8px;color:var(--ink-2);transition:border-color .15s,color .15s}
+.relwrap a:hover{border-color:var(--brand);color:var(--ink)}
+
+/* rank + tier */
+.duo{display:grid;grid-template-columns:1.15fr 1fr;gap:24px;align-items:start}
+.ranklist{list-style:none;padding:0;margin:0;counter-reset:r}
+.ranklist li{counter-increment:r;display:flex;gap:13px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-bottom:9px;box-shadow:var(--shadow)}
+.ranklist li::before{content:counter(r);font-family:var(--mono);font-weight:700;font-size:15px;color:#fff;background:var(--ink);min-width:26px;height:26px;border-radius:6px;display:grid;place-items:center;margin-top:2px}
+.ranklist li b{font-size:14.6px;display:block}
+.ranklist li span{font-size:13.2px;color:var(--muted)}
+.tier{display:grid;gap:10px}
+.tier .t{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.tier .t .lvl{flex:0 0 auto;font-family:var(--mono);font-size:12px;font-weight:700;padding:3px 9px;border-radius:5px}
+.tier .t .lvl.a{background:#e5f1e8;color:#256540}
+.tier .t .lvl.b{background:#fbf1d8;color:#8a6100}
+.tier .t .lvl.c{background:#fde7e2;color:#a8341f}
+.tier .t p{margin:0;font-size:13.8px;color:var(--ink-2)}
+
+/* quote */
+.quote{background:var(--ink);color:#eee8da;border-radius:var(--radius);padding:24px 28px;position:relative;overflow:hidden}
+.quote::before{content:"“";position:absolute;right:18px;top:-18px;font-size:150px;color:rgba(242,178,28,.16);font-family:Georgia,serif;line-height:1}
+.quote p{font-size:16.5px;line-height:1.85;position:relative;z-index:1;color:#f3efe4}
+.quote cite{font-style:normal;font-size:13px;color:var(--brand);font-family:var(--mono)}
+
+/* footer */
+footer.site{background:#141821;color:#b9bec9;padding:40px 0 24px;margin-top:10px;border-top:3px solid var(--brand)}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+footer.site b.fbrand{color:#fff;font-size:17px;display:flex;align-items:center;gap:9px;margin-bottom:10px}
+footer.site p{font-size:13.6px;margin:0 0 8px}
+footer.site h4{color:#fff;font-size:13.6px;letter-spacing:.06em;margin-bottom:10px}
+footer.site ul{list-style:none;padding:0;margin:0}
+footer.site li{margin-bottom:6px}
+footer.site a{color:#b9bec9;font-size:13.4px}
+footer.site a:hover{color:var(--brand)}
+.copy{border-top:1px solid #262c38;margin-top:26px;padding-top:16px;display:flex;gap:16px;flex-wrap:wrap;font-size:12.6px;color:#828a98}
+.copy span:last-child{margin-left:auto;font-family:var(--mono)}
+
+/* back to top */
+#totop{position:fixed;right:18px;bottom:20px;z-index:60;width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--brand);border:2px solid var(--brand);display:grid;place-items:center;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;transform:translateY(8px)}
+#totop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+#totop:hover{background:var(--brand);color:var(--ink)}
+
+/* responsive */
+@media (max-width:1024px){
+  .hero .wrap{grid-template-columns:1fr}
+  .heroart{max-width:520px;margin:0 auto}
+  .feat{grid-template-columns:1fr 1fr}
+  .feat .big{grid-column:span 2;grid-row:auto}
+  .ovgrid{grid-template-columns:repeat(2,1fr)}
+  .catgrid{grid-template-columns:repeat(3,1fr)}
+  .cmts{grid-template-columns:repeat(2,1fr)}
+  .duo,.newswrap{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .menubtn{display:inline-block}
+  nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--card);border-bottom:1px solid var(--line);padding:10px 16px 14px;flex-direction:column;gap:2px;box-shadow:0 10px 20px rgba(27,31,42,.12)}
+  nav.main.open{display:flex}
+  .headin{flex-wrap:wrap;position:relative}
+  .headin .searchbox input{width:112px}
+  .feat,.steps,.cmts,.catgrid,.ovgrid,.fgrid{grid-template-columns:1fr}
+  .feat .big{grid-column:auto}
+  section.block{padding:30px 0}
+  .deep{padding:20px 16px}
+  .annbar .time{margin-left:0;width:100%}
+  .stats{gap:18px}
+}
+@media (max-width:400px){
+  body{font-size:15.5px}
+  .hero{padding:32px 0 30px}
+  .headin{gap:10px}
+  .searchbox{padding-left:6px}
+  .searchbox input{width:96px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none !important;animation:none !important}
+  .btn:hover,.feat article:hover,.catgrid a:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容</a>
+
+<div class="stickwrap">
+  <div class="annbar">
+    <div class="wrap">
+      <span class="tag">更新</span>
+      <span><strong>r星黑料不打烊</strong> 11 月 7 日收录 GTA6 二次延期官方原文与 PC 版缺口讨论，新增客服工单样本 42 份。</span>
+      <span class="time">2026-11-08 06:40 归档</span>
+    </div>
+  </div>
+
+  <header class="site">
+    <div class="wrap headin">
+      <a class="brand" href="/#top" aria-label="r星黑料不打烊 首页">
+        <svg width="34" height="34" viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1b1f2a"/>
+          <path d="M14 44l10-26 8 14 8-14 10 26" fill="none" stroke="#f2b21c" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="32" cy="49" r="3.4" fill="#e8563f"/>
+        </svg>
+        <span>r星黑料不打烊</span>
+      </a>
+
+      <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="mainnav">菜单</button>
+
+      <nav class="main" id="mainnav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选档案</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">频道索引</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见疑问</a>
+        <a href="/#rank">可信度分层</a>
+      </nav>
+
+      <div class="headtools">
+        <form class="searchbox" id="searchform" role="search">
+          <label for="q" class="skip">站内搜索</label>
+          <input id="q" name="q" type="search" placeholder="搜条目 / 事件" autocomplete="off">
+          <button type="submit">查找</button>
+        </form>
+      </div>
+    </div>
+    <div class="wrap"><p class="searchnote" id="searchnote" role="status" aria-live="polite"></p></div>
+  </header>
+</div>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">玩家爆料 · 争议归档 · 条目可核对</span>
+      <h1>r星黑料不打烊</h1>
+      <p class="lead">把 Rockstar Games 十年间被反复提起的跳票、涨价、客服沉默与线上模式衰退，逐条放回日期、版本号与原始措辞里。能核对的留下证据链，核对不了的标成推测，让每次争论都有起点。</p>
+      <div class="cta">
+        <a class="btn btn-p" href="/#latest">看本周新增条目</a>
+        <a class="btn btn-g" href="/#deep">读深度解析</a>
+      </div>
+      <div class="stats">
+        <div><b>1,186</b><span>归档条目总数</span></div>
+        <div><b>42</b><span>客服工单样本</span></div>
+        <div><b>7</b><span>延期事件时间线</span></div>
+        <div><b>2026-11-08</b><span>最近一次核对</span></div>
+      </div>
+    </div>
+    <div class="heroart" aria-hidden="true">
+      <svg viewBox="0 0 520 340" role="img">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f2b21c"/><stop offset="1" stop-color="#e8563f"/>
+          </linearGradient>
+        </defs>
+        <rect x="18" y="26" width="484" height="288" rx="16" fill="#232936" stroke="#3a4152" stroke-width="2"/>
+        <path d="M18 74h484" stroke="#3a4152" stroke-width="2"/>
+        <circle cx="42" cy="50" r="5" fill="#e8563f"/><circle cx="60" cy="50" r="5" fill="#f2b21c"/><circle cx="78" cy="50" r="5" fill="#2f7a52"/>
+        <rect x="44" y="96" width="176" height="12" rx="6" fill="url(#g1)"/>
+        <rect x="44" y="120" width="300" height="8" rx="4" fill="#4a5163"/>
+        <rect x="44" y="138" width="250" height="8" rx="4" fill="#4a5163"/>
+        <rect x="44" y="166" width="140" height="86" rx="8" fill="#2c333f" stroke="#434b5e"/>
+        <rect x="198" y="166" width="140" height="86" rx="8" fill="#2c333f" stroke="#434b5e"/>
+        <rect x="352" y="166" width="118" height="86" rx="8" fill="#2c333f" stroke="#434b5e"/>
+        <path d="M60 232l26-30 20 14 24-34 16 24" fill="none" stroke="#f2b21c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M214 224h106M214 238h80" stroke="#5b6478" stroke-width="6" stroke-linecap="round"/>
+        <rect x="368" y="192" width="86" height="10" rx="5" fill="#e8563f"/>
+        <rect x="368" y="212" width="60" height="8" rx="4" fill="#5b6478"/>
+        <rect x="44" y="270" width="426" height="26" rx="8" fill="#2a303c" stroke="#434b5e"/>
+        <circle cx="62" cy="283" r="5" fill="#2f7a52"/><rect x="78" y="279" width="130" height="8" rx="4" fill="#5b6478"/>
+        <circle cx="480" cy="283" r="6" fill="#f2b21c"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+  <div class="wrap">
+
+    <!-- 1 领域概览 -->
+    <section class="block" id="overview">
+      <div class="sec-head">
+        <h2>领域概览：争议都落在哪几类</h2>
+        <span class="sub">1,186 条 / 7 类</span>
+      </div>
+      <p class="lede">归档里的条目按性质分七堆，同一件事常在两三个堆里各留一条。下面四个数字是本季度被检索最多的方向，括号内为 2026 年 10 月至 11 月初新增条数。</p>
+      <div class="ovgrid">
+        <div class="ovcard">
+          <b>跳票 312</b>
+          <span>上市日期推迟（+18）</span>
+          <div class="bar"><i style="width:86%"></i></div>
+        </div>
+        <div class="ovcard">
+          <b>涨价 208</b>
+          <span>鲨鱼卡与订阅调价（+11）</span>
+          <div class="bar"><i style="width:64%"></i></div>
+        </div>
+        <div class="ovcard">
+          <b>客服 265</b>
+          <span>工单响应与账号找回（+9）</span>
+          <div class="bar"><i style="width:74%"></i></div>
+        </div>
+        <div class="ovcard">
+          <b>线上 401</b>
+          <span>服务器与活动轮换（+22）</span>
+          <div class="bar"><i style="width:92%"></i></div>
+        </div>
+      </div>
+      <p style="margin-top:18px;font-size:14.5px;color:var(--ink-2);max-width:64em"><strong>停更与裁员</strong>（129 条）和<strong>Mod 与私服封禁</strong>（173 条）属于低频高争议堆，单条阅读量高但更新慢；<strong>预告片画面差异</strong>（98 条）多为逐帧比对，容易被断章取义，归档时单独标注了比对时间码。</p>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="block" id="featured">
+      <div class="sec-head">
+        <h2>精选档案推荐</h2>
+        <span class="sub">编辑 11/07 挑</span>
+      </div>
+      <div class="feat">
+        <article class="big">
+          <img src="https://picsum.photos/seed/gta6delay/720/405" width="720" height="405" loading="lazy" alt="GTA6 延期公告截图配色示意图，深色背景上叠加日期文本">
+          <div class="pad">
+            <span class="chip red">跳票</span>
+            <h3>GTA6 从 5 月 26 日推到 11 月 19 日：两次公告的文字差异</h3>
+            <p style="font-size:14.4px;margin:0;color:var(--ink-2)">2026 年 10 月 30 日官方 X 账号的第二次延期说明，删掉了第一次公告里“我们理解等待”的整句，改成“品质标准没有妥协空间”。PC 版仍未出现在任何一段里。</p>
+            <div class="meta" style="margin-top:auto">条目 GM-0412 · 核对于 2026-11-06</div>
+          </div>
+        </article>
+        <article>
+          <img src="https://picsum.photos/seed/sharkcard/640/400" width="640" height="400" loading="lazy" alt="鲨鱼卡价格对照表局部，美元与人民币两列数字">
+          <div class="pad">
+            <span class="chip">涨价</span>
+            <h3>鲨鱼卡三档调价实录</h3>
+            <p style="font-size:13.8px;margin:0;color:var(--ink-2)">大白鲨 99.99→109.99 美元，人民币档 588→648 元。</p>
+            <div class="meta" style="margin-top:auto">条目 PR-0118</div>
+          </div>
+        </article>
+        <article>
+          <img src="https://picsum.photos/seed/rdroline/640/400" width="640" height="400" loading="lazy" alt="荒野大镖客线上模式西部小镇场景示意图">
+          <div class="pad">
+            <span class="chip blue">线上</span>
+            <h3>荒野大镖客线上停更后的任务线还剩什么</h3>
+            <p style="font-size:13.8px;margin:0;color:var(--ink-2)">赏金猎人、商贩、私酒三条线保留，新通行证停发。</p>
+            <div class="meta" style="margin-top:auto">条目 RD-0093</div>
+          </div>
+        </article>
+        <article>
+          <img src="https://picsum.photos/seed/supportticket/640/400" width="640" height="400" loading="lazy" alt="客服工单界面示意图，状态栏显示等待中">
+          <div class="pad">
+            <span class="chip green">客服</span>
+            <h3>42 份工单的响应时间分布</h3>
+            <p style="font-size:13.8px;margin:0;color:var(--ink-2)">首次响应中位数 3 天，7 天无回复 9 份。</p>
+            <div class="meta" style="margin-top:auto">条目 CS-0206</div>
+          </div>
+        </article>
+        <article>
+          <img src="https://picsum.photos/seed/modban/640/400" width="640" height="400" loading="lazy" alt="模组加载器窗口与错误提示示意图">
+          <div class="pad">
+            <span class="chip">封禁</span>
+            <h3>单机 Mod 被误判的申诉路径</h3>
+            <p style="font-size:13.8px;margin:0;color:var(--ink-2)">10 月 14 日一批账号解封，附带条件写得含糊。</p>
+            <div class="meta" style="margin-top:auto">条目 MB-0357</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="block" id="latest">
+      <div class="sec-head">
+        <h2>最新更新动态</h2>
+        <span class="sub">按归档时间倒序</span>
+      </div>
+      <div class="newswrap">
+        <ol class="timeline">
+          <li>
+            <time datetime="2026-11-07">11 月 7 日</time>
+            <h3>GTA6 延期公告下方评论破 12 万条</h3>
+            <p>官方 X 帖的回复区在 36 小时内累积 12.4 万条，高赞前 20 条里有 14 条要求公开 PC 版计划。Rockstar 未在帖内回复，只在支持页加了一行“更多平台信息稍后公布”。</p>
+          </li>
+          <li>
+            <time datetime="2026-11-05">11 月 5 日</time>
+            <h3>启动器 1.0.94 更新后登录缓存问题</h3>
+            <p>版本号在设置页可见。更新说明只写“提升稳定性”，但 r/GTAOnline 当日出现 60 余条登录失败反馈，重装启动器可缓解。</p>
+          </li>
+          <li>
+            <time datetime="2026-11-03">11 月 3 日</time>
+            <h3>万圣节活动结束，限定面具下架</h3>
+            <p>活动从 10 月 22 日持续到 11 月 3 日，共 13 天，比 2025 年同期短 4 天。已购买的面具保留在衣柜，未购买的商店下架。</p>
+          </li>
+          <li>
+            <time datetime="2026-10-30">10 月 30 日</time>
+            <h3>第二次延期公告发布</h3>
+            <p>发售日改为 2026 年 11 月 19 日。公告共 3 段、187 个英文单词，未出现“PC”字样。同日 Take-Two 股价盘后跌 6.8%。</p>
+          </li>
+          <li>
+            <time datetime="2026-10-26">10 月 26 日</time>
+            <h3>贴吧统计的 42 份客服工单出炉</h3>
+            <p>样本来自 10 月 8 日至 10 月 24 日提交的工单，含退款 11 份、账号找回 17 份、误封申诉 14 份。首次响应中位数 3 天。</p>
+          </li>
+        </ol>
+        <aside class="sidebox">
+          <h3>本周被搜最多的条目标签</h3>
+          <ul>
+            <li><span>01</span>GTA6 发售日</li>
+            <li><span>02</span>鲨鱼卡价格</li>
+            <li><span>03</span>启动器登录失败</li>
+            <li><span>04</span>Red Dead 线上停更</li>
+            <li><span>05</span>单机 Mod 封禁</li>
+            <li><span>06</span>客服退款进度</li>
+            <li><span>07</span>预告片画面对比</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="block" id="channels">
+      <div class="sec-head">
+        <h2>频道索引</h2>
+        <span class="sub">10 个频道</span>
+      </div>
+      <div class="catgrid">
+        <a href="/#latest">跳票与延期记录 <i>312</i></a>
+        <a href="/#featured">鲨鱼卡与内购调价 <i>208</i></a>
+        <a href="/#faq">客服工单与退款 <i>265</i></a>
+        <a href="/#latest">GTA 线上服务器状态 <i>401</i></a>
+        <a href="/#featured">荒野大镖客线上停更 <i>93</i></a>
+        <a href="/#guide">启动器与登录故障 <i>147</i></a>
+        <a href="/#featured">单机 Mod 与封禁申诉 <i>173</i></a>
+        <a href="/#deep">预告片逐帧比对 <i>98</i></a>
+        <a href="/#rank">内部爆料可信度 <i>121</i></a>
+        <a href="/#comments">玩家评论存档 <i>1,043</i></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="block" id="deep">
+      <div class="sec-head">
+        <h2>深度解析：延期、涨价与客服沉默的三条证据链</h2>
+        <span class="sub">全页唯一主体阅读区</span>
+      </div>
+      <div class="deep">
+        <div class="djump">
+          <a href="/#deep-1">① 两次延期公告的文字差异</a>
+          <a href="/#deep-2">② 鲨鱼卡调价的区间对比</a>
+          <a href="/#deep-3">③ 客服响应能不能算“慢”</a>
+        </div>
+
+        <h3 id="deep-1">判断一：第二次延期公告不是第一次的加长版，而是换了一套叙事</h3>
+        <p>把 2024 年 5 月 2 日与 2026 年 10 月 30 日的两份延期说明并排放，最直观的差异在段落功能上。第一次公告用前半段解释“需要更多时间达到预期质量”，后半段安抚，出现“我们理解等待”这类直接对玩家说话的句子。第二次公告三段全部围绕内部标准，没有任何一句面向玩家的致歉措辞，“品质标准没有妥协空间”被放在第二段开头，成为整篇的核心句。</p>
+        <p>数字层面也能对上。第一次延期把窗口从 2025 年秋拉到 2026 年 5 月 26 日，跨度约 8 个月；第二次从 5 月 26 日推到 11 月 19 日，跨度约 6 个月。两次合计推迟约 14 个月。公告字数从 214 个英文单词降到 187 个，删掉的 27 个词几乎全在情绪安抚部分。</p>
+        <table class="cmp">
+          <thead><tr><th>维度</th><th>2024-05-02 公告</th><th>2026-10-30 公告</th></tr></thead>
+          <tbody>
+            <tr><td>英文词数</td><td class="num">214</td><td class="num">187</td></tr>
+            <tr><td>新发售日</td><td class="num">2026-05-26</td><td class="num">2026-11-19</td></tr>
+            <tr><td>是否提及平台</td><td>提及 PS5 / Xbox Series</td><td class="num">未提及</td></tr>
+            <tr><td>是否出现致歉句</td><td>有（2 句）</td><td class="num">无</td></tr>
+            <tr><td>发布渠道</td><td>官方新闻页 + X</td><td>仅 X + 支持页一行</td></tr>
+          </tbody>
+        </table>
+        <p>这套变化可以反驳“公告越来越敷衍只是玩家情绪”的说法：删减集中在面向玩家的部分，保留的是内部标准表述，属于有意的文体选择。反过来说，也不能据此推断开发进度崩盘，公告词数与产品质量之间没有可验证的因果，只能说明沟通策略收紧了。</p>
+
+        <h3 id="deep-2">判断二：鲨鱼卡涨价幅度看着温和，落到单机党的实际支出上并不温和</h3>
+        <p>美元区大白鲨卡从 99.99 涨到 109.99，涨幅 10%；鲸鲨卡 49.99→54.99，涨幅 10%；人民币区 8 亿档 588→648 元，涨幅 10.2%。三个数字都卡在 10% 附近，看上去是一次统一调整。问题在于游戏币的购买力这几年在变：2026 年 9 月上线的新载具均价约 380 万游戏币，比 2024 年同期的同类载具高出约 22%。价格涨 10%、标的物涨 22%，实际兑换比是变差的。</p>
+        <div class="verdict"><strong>可核对拆解：</strong>要判断一次调价算不算“贵”，需要三列数字——卡面价、档位游戏币、当期主力载具均价。三者任一列缺失，结论都站不住。归档里 PR-0118 条目把三列都记了，可以直接沿用。</div>
+        <p>论坛里常见的反驳是“反正都是自愿买”。这个说法在逻辑上成立，但不构成对调价幅度的评估，只是把问题换成了消费选择。评估幅度只看数字，跟买不买是两件事，归档时把这类回复单独归到“立场”而非“证据”。</p>
+
+        <h3 id="deep-3">判断三：客服“慢”有数据支撑，但慢的分布很不均匀</h3>
+        <p>贴吧 10 月 26 日统计的 42 份工单里，首次响应中位数 3 天，这与社区里“等一周”的印象有落差。拆开看，退款类 11 份的中位数是 2 天，账号找回 17 份的中位数是 5 天，误封申诉 14 份的中位数是 4 天。真正拉长尾巴的是账号找回，最慢一份等了 13 天，提交了 3 次补充材料。</p>
+        <p>另一个可核对的细节是自动回复的触发时间。归档记录了 9 份工单的邮件时间戳，自动回复集中在提交后 4 分钟内，人工首次回复集中在第 2 至第 5 天。也就是说“提交后很快有回应”是真的，“回应里没有实质内容”也是真的，两句话说的是不同环节。</p>
+        <blockquote>“我 10 月 9 号提交的账号找回，10 号收到自动回复，14 号人工说资料不足，让我补 2019 年的购买凭证。最后是 22 号解决的。”<cite>—— 贴吧用户 @北岸旧车行，工单样本 CS-0206-17</cite></blockquote>
+        <p>把这三条放在一起，能得出一个不太讨喜的结论：客服系统的瓶颈不在首次响应速度，在跨年资料核验环节。归档里凡是提到“2019 年凭证”的工单，处理时长中位数是 9 天，是不涉及历史凭证工单的 2.6 倍。这个差异足够具体，可以被新样本推翻，也值得继续采样。</p>
+      </div>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="block" id="guide">
+      <div class="sec-head">
+        <h2>体验指南：遇上这些情况怎么处理</h2>
+        <span class="sub">按条目整理</span>
+      </div>
+      <p class="lede">下面五步对应归档里最高频的五类求助，顺序按处理成本从低到高排。每条都标了对应的条目编号，方便回查原始记录。</p>
+      <div class="steps">
+        <div class="st">
+          <h3>启动器反复要求登录</h3>
+          <p>先清 Documents 下的 Social Club 缓存目录，再重启启动器。10 月 22 日 r/GTAOnline 高赞帖的 137 条回复里，这一步解决了约七成案例。无效再走重装，重装会保留已购内容。</p>
+        </div>
+        <div class="st">
+          <h3>退款申请被拒</h3>
+          <p>退款窗口以首次启动时间为准，不是购买时间。附上启动器日志里的会话记录比截图更有用，工单 CS-0206-08 就是靠日志翻案的，处理时长 4 天。</p>
+        </div>
+        <div class="st">
+          <h3>单机 Mod 被判违规</h3>
+          <p>申诉时说明是否在线上模式加载过 Mod。10 月 14 日解封的那批账号，共同点是只使用单机加载器且未进入线上。附加载器版本号能加快核验。</p>
+        </div>
+        <div class="st">
+          <h3>账号找回缺历史凭证</h3>
+          <p>优先翻邮箱里的旧购买回执，2019 年之前的订单邮件常被归档到垃圾箱。找不到就用绑定手机号与常用登录地补，工单里这两项出现的频率最高。</p>
+        </div>
+        <div class="st" style="grid-column:1/-1">
+          <h3>线上模式活动错过</h3>
+          <p>限定物品过期后不进商店，但已解锁的留在衣柜与车库。万圣节面具 11 月 3 日下架，未购买的不再补货；2025 年同期的同类面具也没有返场记录。想补收藏只能等下一次活动轮换，官方没有承诺周期。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="block" id="faq">
+      <div class="sec-head">
+        <h2>常见疑问</h2>
+        <span class="sub">6 问</span>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>GTA6 第二次延期到 2026 年 11 月 19 日是怎么回事？</summary>
+          <div>Rockstar 于 2026 年 10 月 30 日在官方 X 账号发布延期说明，把发售日从 2026 年 5 月 26 日推至 11 月 19 日，理由是品质打磨。文字未提及 PC 版，PC 玩家需等待后续公告。同日 Take-Two 盘后股价跌 6.8%。</div>
+        </details>
+        <details>
+          <summary>R星启动器为什么反复要求重新登录？</summary>
+          <div>Reddit r/GTAOnline 在 2026 年 10 月 22 日的高赞帖汇总了 137 条回复，多数人把问题归到登录令牌缓存失效。清掉 Documents 下的 Social Club 缓存目录后恢复；启动器 1.0.94 版本更新后该问题集中出现，与更新说明里的“提升稳定性”表述不一致。</div>
+        </details>
+        <details>
+          <summary>鲨鱼卡涨价后到底贵了多少？</summary>
+          <div>以美元区为例，大白鲨卡从 99.99 美元上调到 109.99 美元，涨幅 10%；人民币区 8 亿游戏币档从 588 元调到 648 元，涨幅 10.2%。同期新载具均价上涨约 22%，兑换比实际变差。</div>
+        </details>
+        <details>
+          <summary>荒野大镖客线上模式停更后还能玩吗？</summary>
+          <div>服务器仍在运行，2026 年 10 月 18 日官方公告只说明不再推出大型内容更新，现有赏金猎人与商贩任务线保留，季节活动照旧轮换。新通行证停发，已解锁的服饰与马匹不受影响。</div>
+        </details>
+        <details>
+          <summary>客服工单多久能回复？</summary>
+          <div>贴吧 10 月 26 日统计的 42 份工单里，首次响应中位数 3 天，7 天无回复的有 9 份。涉及退款与账号找回的工单普遍更慢，提到 2019 年历史凭证的样本中位数是 9 天。</div>
+        </details>
+        <details>
+          <summary>爆料帖里的内部消息能信吗？</summary>
+          <div>分辨先看是否给出可核对的中段，比如测试版本号、录制日期、职责人。只写“据内部人士”而没有这些线索的帖子，命中率在归档记录里不到两成。2026 年 9 月一条声称“GTA6 已进入压盘”的帖子，因未给版本号被标成推测，后来也没被官方信息证实。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="block" id="comments">
+      <div class="sec-head">
+        <h2>玩家评论存档</h2>
+        <span class="sub">选录 6 条</span>
+      </div>
+      <div class="cmts">
+        <div class="cmt">
+          <div class="who"><span class="av">北</span><div><b>@北岸旧车行</b><span>2026-11-06</span></div></div>
+          <p>第二次延期公告我看了三遍，确实一句道歉都没有。第一次还有“我们理解等待”，这次直接讲标准，读起来像给股东看的。</p>
+          <div class="ref">指向条目 GM-0412</div>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="av">洛</span><div><b>@洛圣都修车匠</b><span>2026-11-05</span></div></div>
+          <p>涨价 10% 我觉得还好，真正疼的是载具价格。上周想买那台新摩托，一看 380 万，直接把游戏关了。</p>
+          <div class="ref">指向条目 PR-0118</div>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="av">K</span><div><b>@Kai_2077</b><span>2026-11-04</span></div></div>
+          <p>启动器登录这事我遇到两次，清缓存确实管用。但更新的说明写“提升稳定性”，结果更不稳定了，这个措辞有点敷衍。</p>
+          <div class="ref">指向条目 GN-0291</div>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="av">老</span><div><b>@老周的马车</b><span>2026-11-02</span></div></div>
+          <p>大镖客线上停更我不意外，去年通行证就没什么新东西了。现在还能跑赏金，够我周末玩两小时，谈不上愤怒。</p>
+          <div class="ref">指向条目 RD-0093</div>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="av">阿</span><div><b>@阿勒泰的风</b><span>2026-10-31</span></div></div>
+          <p>客服这块说句公道话，我误封申诉四天就回了，比预期快。但朋友账号找回拖了十三天，还让补 2019 年的凭证，这就很离谱。</p>
+          <div class="ref">指向条目 CS-0206-17</div>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="av">M</span><div><b>@MilkTea_9</b><span>2026-10-29</span></div></div>
+          <p>预告片比对那几条有点过了，逐帧找差异谁都能找出东西。真正值得记的是玩法删减，不是云层厚度。</p>
+          <div class="ref">指向条目 TR-0077</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="block" id="news">
+      <div class="sec-head">
+        <h2>相关资讯</h2>
+        <span class="sub">同期外部报道</span>
+      </div>
+      <ul style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px 26px;list-style:none;padding:0;margin:0">
+        <li style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 15px"><strong>11 月 1 日 · Take-Two 财报电话会</strong><br><span style="font-size:14px;color:var(--ink-2)">管理层确认 2027 财年营收指引不变，分析师追问发行窗口时的回答只有一句“我们按计划推进”。</span></li>
+        <li style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 15px"><strong>10 月 28 日 · 游戏媒体访谈</strong><br><span style="font-size:14px;color:var(--ink-2)">两位前员工匿名谈及 QA 外包节奏，提到“每轮测试窗口被压缩到 3 周”，该说法无第三方印证。</span></li>
+        <li style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 15px"><strong>10 月 24 日 · 社区投票</strong><br><span style="font-size:14px;color:var(--ink-2)">r/GTA6 版块 4,812 人投票，“最想要的是 PC 版同步”占 58%，其次是“价格不超过 79.99 美元”占 23%。</span></li>
+        <li style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 15px"><strong>10 月 20 日 · 平台商店页面变动</strong><br><span style="font-size:14px;color:var(--ink-2)">主机商店的预购页面短暂出现“2026 年 5 月 26 日”旧日期，两小时后改回“待定”，官方未解释。</span></li>
+      </ul>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="block" id="related">
+      <div class="sec-head">
+        <h2>相关推荐</h2>
+        <span class="sub">长尾检索词</span>
+      </div>
+      <div class="relwrap">
+        <a href="/#latest">GTA6 发售日推迟原因</a>
+        <a href="/#featured">鲨鱼卡价格人民币</a>
+        <a href="/#faq">R星启动器登录失败解决</a>
+        <a href="/#featured">荒野大镖客线上停更公告</a>
+        <a href="/#deep">R星客服退款多久到账</a>
+        <a href="/#rank">GTA6 内部爆料可信度</a>
+        <a href="/#guide">单机 Mod 封禁申诉模板</a>
+        <a href="/#deep">GTA6 预告片画面对比</a>
+        <a href="/#latest">GTA 线上万圣节面具返场</a>
+        <a href="/#guide">R星账号找回凭证缺失</a>
+      </div>
+    </section>
+
+    <!-- 11 可信度分层 + 榜单 -->
+    <section class="block" id="rank">
+      <div class="sec-head">
+        <h2>爆料可信度分层与事件清单</h2>
+        <span class="sub">11 月版</span>
+      </div>
+      <div class="duo">
+        <div>
+          <h3 style="font-size:16px;margin-bottom:12px">2026 年被反复提起的事件（按归档检索量）</h3>
+          <ol class="ranklist">
+            <li><div><b>GTA6 二次延期与 PC 版缺口</b><span>检索 8,410 次 · 官方原文 + 股价反应</span></div></li>
+            <li><div><b>鲨鱼卡三档统一调价</b><span>检索 5,932 次 · 卡面价可查</span></div></li>
+            <li><div><b>启动器 1.0.94 登录缓存问题</b><span>检索 4,177 次 · 社区复现帖 60+</span></div></li>
+            <li><div><b>Red Dead 线上停止大型更新</b><span>检索 3,806 次 · 官方公告 10 月 18 日</span></div></li>
+            <li><div><b>单机 Mod 批量误判与解封</b><span>检索 2,915 次 · 解封条件含糊</span></div></li>
+            <li><div><b>客服账号找回跨年凭证要求</b><span>检索 2,204 次 · 42 份工单样本</span></div></li>
+          </ol>
+        </div>
+        <div>
+          <h3 style="font-size:16px;margin-bottom:12px">单条爆料的证据分层</h3>
+          <div class="tier">
+            <div class="t"><span class="lvl a">A 级</span><p>有官方原文、版本号或可复现步骤。例：10 月 30 日延期公告、1.0.94 版本号、万圣节活动起止日期。</p></div>
+            <div class="t"><span class="lvl b">B 级</span><p>有当事账号、时间戳与具体数字，但缺官方确认。例：42 份工单统计、客服邮件时间戳、商店页面两小时变动。</p></div>
+            <div class="t"><span class="lvl b">B 级</span><p>多方转述一致但源头不明。例：前员工谈 QA 窗口压缩，两人说法接近，无书面材料。</p></div>
+            <div class="t"><span class="lvl c">C 级</span><p>只给结论不给中段。例：“据内部人士，游戏已压盘”“某渠道称下周公布 PC 版”。归档只保留标题，标注推测。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 引语 / 补充 -->
+    <section class="block" id="voice">
+      <div class="sec-head">
+        <h2>条目维护者的话</h2>
+        <span class="sub">补充板块</span>
+      </div>
+      <div class="quote">
+        <p>归档做得越久，越发现争议的核心不在“R 星好不好”，在信息落差。同一份公告，读的人拿到的东西不一样：有人看到日期，有人看到删掉的句子，有人只看到股价。把这三层拆开放进不同条目，争论才有落点。</p>
+        <cite>—— 条目核对组，2026 年 11 月 8 日</cite>
+      </div>
+      <p style="margin-top:16px;font-size:14.5px;color:var(--ink-2);max-width:64em">补充一个常被忽略的核对项：官方 X 帖子如果被编辑过，归档会保留编辑前后两版文本。11 月 6 日一条关于活动延期的帖子就改过一次，把“11 月 3 日结束”改成“11 月 4 日结束”，社区截图多为改前版本。</p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <b class="fbrand">
+          <svg width="26" height="26" viewBox="0 0 64 64" role="img" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#f2b21c"/>
+            <path d="M14 44l10-26 8 14 8-14 10 26" fill="none" stroke="#1b1f2a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="32" cy="49" r="3.4" fill="#1b1f2a"/>
+          </svg>
+          r星黑料不打烊
+        </b>
+        <p>把每一次跳票、调价、封禁与客服往返，放回日期和原文里。证据够的标 A，缺一环的标 B，只剩结论的标 C。</p>
+        <p style="font-size:12.8px;color:#828a98">页脚更新时间 2026-11-08，对应正文新增：GTA6 延期公告评论数、启动器 1.0.94 问题、42 份工单统计。</p>
+      </div>
+      <div>
+        <h4>频道入口</h4>
+        <ul>
+          <li><a href="/#latest">跳票与延期记录</a></li>
+          <li><a href="/#featured">鲨鱼卡与内购调价</a></li>
+          <li><a href="/#faq">客服工单与退款</a></li>
+          <li><a href="/#latest">GTA 线上服务器状态</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>栏目</h4>
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#rank">可信度分层</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>互动</h4>
+        <ul>
+          <li><a href="/#comments">玩家评论存档</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#deep">爆料核对方法</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>示例数据说明：条目编号、检索次数、工单样本与投票数据均为演示用示例，官方信息以 Rockstar 与 Take-Two 发布为准。</span>
+      <span>© 2026 r星黑料不打烊 · 玩家归档</span>
+    </div>
+  </div>
+</footer>
+
+<button id="totop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var mb=document.getElementById('menubtn');
+  var nav=document.getElementById('mainnav');
+  if(mb&&nav){
+    mb.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      mb.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=760){
+        nav.classList.remove('open');
+        mb.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var top=document.getElementById('totop');
+  window.addEventListener('scroll',function(){
+    if(window.pageYOffset>420){top.classList.add('show');}else{top.classList.remove('show');}
+  },{passive:true});
+  top.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  // local search
+  var form=document.getElementById('searchform');
+  var q=document.getElementById('q');
+  var note=document.getElementById('searchnote');
+  function clearMarks(){
+    document.querySelectorAll('.hidden-by-search').forEach(function(el){el.classList.remove('hidden-by-search');});
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    clearMarks();
+    var kw=(q.value||'').trim().toLowerCase();
+    if(!kw){
+      note.textContent='请输入条目名或事件关键词，例如：延期、鲨鱼卡、工单。';
+      note.classList.add('on');
+      return;
+    }
+    var hits=0;
+    var nodes=document.querySelectorAll('main section.block, main .feat article, main .timeline li, main .catgrid a, main .faq details, main .cmt, main .ranklist li, main .relwrap a, main .sidebox li');
+    nodes.forEach(function(el){
+      var txt=el.textContent.toLowerCase();
+      if(txt.indexOf(kw)===-1){el.classList.add('hidden-by-search');}else{hits++;}
+    });
+    if(hits===0){
+      clearMarks();
+      note.textContent='没有找到与“'+q.value+'”匹配的条目，试试：延期、鲨鱼卡、启动器、工单、停更、Mod。';
+      note.classList.add('on');
+    }else{
+      note.textContent='找到 '+hits+' 处与“'+q.value+'”相关的条目，已隐藏其余内容。清空后重新搜索可恢复。';
+      note.classList.add('on');
+    }
+  });
+  q.addEventListener('input',function(){
+    if(!q.value.trim()){clearMarks();note.classList.remove('on');note.textContent='';}
+  });
+})();
+</script>
+</body>
+  </html>
